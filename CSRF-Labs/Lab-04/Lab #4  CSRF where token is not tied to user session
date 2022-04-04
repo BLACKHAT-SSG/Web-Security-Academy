@@ -1,0 +1,15 @@
+Lab #4 - CSRF where token is not tied to user session
+Vulnerable parameter - email change functionality
+Goal - exploit the csrf vulnerability and change the email address
+Creds - wiener:peter - carlos:montoya
+
+Analysis:
+In order for a csrf attack to be possible:
+#- A relevant action - change a user email
+#- Cookie based session handling - session cookie
+#- No unpredictable request parameters - csrf token is not tied to user session
+
+Testing CSRF Tokens
+#- Remove the CSRF token nad see if application accepts requests
+#- Change the request method from POST to GET
+#- See if CSRF token is tied to user session (for specific user; So we login with 2nd user account, inspect element in change email bar and copy user session cookie of 2nd user then replaced it in burp 1st user request. I will bypass csrf token).
