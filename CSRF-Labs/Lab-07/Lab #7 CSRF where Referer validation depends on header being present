@@ -1,0 +1,10 @@
+Lab #7 - CSRF where Referer validation depends on header being present
+Vulnerable parameter - email change functionality
+Goal - exploit the csrf vulnerability and change the email address
+Creds - wiener:peter 
+
+Analysis:
+In order for a csrf attack to be possible:
+#- A relevant action - change a user email - Satisfied
+#- Cookie based session handling - session cookie - Satisfied
+#- No unpredictable request parameters - no csrf token (Satisfied)
